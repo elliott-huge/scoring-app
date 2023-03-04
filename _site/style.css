@@ -92,7 +92,6 @@ button span {
 }
 
 .a {
-    /* background-color: rgb(153, 237, 237); */
     top: 0;
     height: 10vw;
     width: 10vw;
@@ -104,7 +103,6 @@ button span {
 }
 
 .b {
-    /* background-color: rgb(241, 180, 158); */
     margin-top: 18%;
     width: 30vh;
     max-width: 15vw;
@@ -121,11 +119,10 @@ button span {
 }
 
 .c {
-    /* background-color: rgb(231, 154, 195); */
     bottom: 0;
     width: 20vw;
     height: 20vw;
-    margin: 16px;
+    margin: 0 16px;
 }
 
 #left .c {
