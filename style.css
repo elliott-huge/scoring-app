@@ -25,6 +25,7 @@ body {
     border-radius: 3px;
     height: 60%;
     background-color: grey;
+    margin-top: 16px;
 }
 
 .player {
