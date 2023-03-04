@@ -13,7 +13,7 @@
     </div>
     <div id="fullscreen-container">
       <button onclick="fullscreen()" id="fullscreen">
-        <span class="material-icons md-48">fullscreen</span>
+        <span id="fullscreen-icon"class="material-icons md-48">fullscreen</span>
       </button>
     </div>
     <div class="content">
@@ -58,12 +58,22 @@
     }
     function fullscreen() {
       var elem = document.documentElement;
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.webkitRequestFullscreen) { /* Safari */
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) { /* IE11 */
-        elem.msRequestFullscreen();
+      const icon = document.getElementById("")
+      if (!window.screenTop && !window.screenY) {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        }
+        icon.textContent = "fullscreen"
+      }
+      else {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+          elem.webkitRequestFullscreen();
+        }
+        icon.textContent = "fullscreen_exit"
       }
     }
   </script>
