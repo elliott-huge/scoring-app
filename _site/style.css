@@ -150,6 +150,26 @@ button span {
     left: 0;
 }
 
+#fullscreen-container {
+    position: fixed;
+    bottom: 64px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#fullscreen {
+    width: 64px;
+    height: 64px;
+    box-shadow: none;
+    opacity: 54%;
+}
+
+#fullscreen:active {
+    opacity: 100%;
+}
+
 
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }

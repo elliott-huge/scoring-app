@@ -11,6 +11,11 @@
         <span>Reset</span>
       </button>
     </div>
+    <div id="fullscreen-container">
+      <button onclick="fullscreen()" id="fullscreen">
+        <span class="material-icons md-48">fullscreen</span>
+      </button>
+    </div>
     <div class="content">
       <div class="player" id="left">
         <button onclick="incrementScore('blue', 3)" class="a">+3<br><span>Head</span>
@@ -50,6 +55,16 @@
       left.textContent = 0;
       const right = document.getElementById("right-score");
       right.textContent = 0;
+    }
+    function fullscreen() {
+      var elem = document.documentElement;
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
     }
   </script>
 </html>
