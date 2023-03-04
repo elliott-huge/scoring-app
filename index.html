@@ -58,8 +58,8 @@
     }
     function fullscreen() {
       var elem = document.documentElement;
-      const icon = document.getElementById("")
-      if (!window.screenTop && !window.screenY) {
+      const icon = document.getElementById("fullscreen-icon")
+      if (window.innerHeight == screen.height) {
         if (document.exitFullscreen) {
           document.exitFullscreen();
         } else if (document.webkitExitFullscreen) {
